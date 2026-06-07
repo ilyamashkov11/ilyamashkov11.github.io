@@ -46,12 +46,13 @@ export default function Home() {
                   <p className="timeline-desc">{item.description}</p>
                 </div>
                 <div className="timeline-connector">
-                  <div className="timeline-dot" />
+                  <div className={`timeline-dot${i === 0 ? ' present' : ''}`} />
                 </div>
                 <span className="timeline-period">{item.period}</span>
               </div>
             )
           })}
+          <img src="/root-stem.png" alt="" className="timeline-illustration" />
         </div>
       </section>
     </main>

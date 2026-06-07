@@ -32,6 +32,7 @@
 .timeline {
   position: relative;
   width: 100%;
+  padding-top: 2rem;
 }
 
 .timeline-axis {
@@ -40,8 +41,21 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #333;
+  background: linear-gradient(to bottom, #bbb 0%, #bbb 55%, transparent 80%);
   transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-illustration {
+  display: block;
+  width: 760px;
+  max-width: 100%;
+  margin: -100px auto 0;
+  position: relative;
+  z-index: 1;
+  /* Nudge right until the stem in the image aligns with the axis line above.
+     Increase the value to move right, decrease (or go negative) to move left. */
+  transform: translateX(8px);
 }
 
 /* Each entry: 3 columns — content | connector | period (left side)
@@ -108,6 +122,11 @@
   background: #fff;
   flex-shrink: 0;
   margin-top: 0.2rem;
+}
+
+.timeline-dot.present {
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
 }
 
 .timeline-period {
