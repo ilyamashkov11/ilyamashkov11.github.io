@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navbar-socials {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-socials a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.navbar-socials a:hover {
+  opacity: 0.4;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
