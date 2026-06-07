@@ -1,38 +1,47 @@
 import './css/Home.css'
 
+const experience = [
+  {
+    period: '2024 — Present',
+    role: 'Software Engineer',
+    company: 'Company Name',
+    description: 'Brief description of responsibilities and impact.',
+  },
+  {
+    period: '2022 — 2024',
+    role: 'Frontend Developer',
+    company: 'Company Name',
+    description: 'Brief description of responsibilities and impact.',
+  },
+  {
+    period: '2021 — 2022',
+    role: 'Junior Developer',
+    company: 'Company Name',
+    description: 'Brief description of responsibilities and impact.',
+  },
+]
+
 export default function Home() {
   return (
-    <main className="home" id="home">
-      <section className="hero">
-        <h1>Hi, I'm Ilya 👋</h1>
-        <p>I build things for the web.</p>
-        <a className="btn" href="#projects">See my work</a>
-      </section>
-
-      <section className="section" id="about">
-        <h2>About</h2>
-        <p>A little bit about me goes here.</p>
-      </section>
-
-      <section className="section" id="projects">
-        <h2>Projects</h2>
-        <div className="project-grid">
-          <div className="project-card">
-            <h3>Project One</h3>
-            <p>Short description of the project.</p>
-            <a href="#">View →</a>
-          </div>
-          <div className="project-card">
-            <h3>Project Two</h3>
-            <p>Short description of the project.</p>
-            <a href="#">View →</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="contact">
-        <h2>Contact</h2>
-        <p>Reach me at <a href="mailto:you@email.com">you@email.com</a></p>
+    <main className="home">
+      <section className="timeline">
+        <div className="timeline-axis" />
+        {experience.map((item, i) => {
+          const isLeft = i % 2 === 0
+          return (
+            <div className={`timeline-entry ${isLeft ? 'left' : 'right'}`} key={i}>
+              <div className="timeline-content">
+                <h2 className="timeline-role">{item.role}</h2>
+                <span className="timeline-company">{item.company}</span>
+                <p className="timeline-desc">{item.description}</p>
+              </div>
+              <div className="timeline-connector">
+                <div className="timeline-dot" />
+              </div>
+              <span className="timeline-period">{item.period}</span>
+            </div>
+          )
+        })}
       </section>
     </main>
   )

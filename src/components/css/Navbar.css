@@ -1,23 +1,23 @@
 .navbar {
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  height: 60px;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #333;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
-.navbar-logo {
-  font-weight: 700;
-  font-size: 1.1rem;
+.navbar-name {
+  font-size: 0.95rem;
+  font-weight: 500;
   color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.navbar-links {
+.navbar-socials {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -25,13 +25,20 @@
   padding: 0;
 }
 
-.navbar-links a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 0.95rem;
+.navbar-socials a {
+  display: flex;
+  align-items: center;
+  color: #555;
+  opacity: 1;
   transition: color 0.2s;
 }
 
-.navbar-links a:hover {
+.navbar-socials a:hover {
   color: #fff;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
