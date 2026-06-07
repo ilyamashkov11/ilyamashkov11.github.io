@@ -1,16 +1,37 @@
 .home {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 8rem 2rem 6rem;
+  gap: 5rem;
+}
+
+.page-section {
+  width: 100%;
+  max-width: 900px;
+}
+
+.section-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 2rem;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  color: #888;
+  line-height: 1.8;
+  max-width: 560px;
 }
 
 /* Central vertical line */
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 900px;
 }
 
 .timeline-axis {
@@ -19,7 +40,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #1e1e1e;
+  background: #333;
   transform: translateX(-50%);
 }
 
@@ -91,7 +112,7 @@
 
 .timeline-period {
   font-size: 0.75rem;
-  color: #444;
+  color: #666;
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
@@ -106,14 +127,14 @@
 
 .timeline-company {
   font-size: 0.78rem;
-  color: #555;
+  color: #777;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .timeline-desc {
   font-size: 0.85rem;
-  color: #3a3a3a;
+  color: #666;
   margin: 0.6rem 0 0;
   line-height: 1.6;
 }
